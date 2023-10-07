@@ -13,7 +13,7 @@ local tbl_deep_extend = vim.tbl_deep_extend
 ---@field theme string?
 ---@field overrides HighlightGroups | fun(colors: Palette): HighlightGroups
 local DEFAULT_CONFIG = {
-   italic_comment = true,
+   italic_comment = false,
    transparent_bg = false,
    show_end_of_buffer = false,
    lualine_bg_color = nil,
