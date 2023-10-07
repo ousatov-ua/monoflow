@@ -63,12 +63,12 @@ local function override_groups(groups, overrides)
    return groups
 end
 
----apply dracula colorscheme
+---apply monoflow colorscheme
 ---@param configs MonoflowConfig
 local function apply(configs)
    local colors = configs.colors
    apply_term_colors(colors)
-   local groups = require("dracula.groups").setup(configs)
+   local groups = require("monoflow.groups").setup(configs)
 
    -- apply transparents
    if configs.transparent_bg then
@@ -92,7 +92,7 @@ end
 ---@type MonoflowConfig
 local user_configs = {}
 
---- get dracula configs
+--- get monoflow configs
 ---@return MonoflowConfig
 local function get_configs()
    local configs = DEFAULT_CONFIG
@@ -106,15 +106,15 @@ local function get_configs()
    return configs
 end
 
----setup dracula colorscheme
+---setup monoflow colorscheme
 ---@param configs MonoflowConfig?
 local function setup(configs)
    if type(configs) == "table" then
-      user_configs = configs --[[@as DraculaConfig]]
+      user_configs = configs --[[@as MonoflowConfig]]
    end
 end
 
----load dracula colorscheme
+---load monoflow colorscheme
 ---@param theme string?
 local function load(theme)
    if vim.version().minor < 7 then
@@ -133,7 +133,7 @@ local function load(theme)
 
    o.background = "dark"
    o.termguicolors = true
-   g.colors_name = theme or 'dracula'
+   g.colors_name = theme or 'monoflow'
 
    apply(get_configs())
 end

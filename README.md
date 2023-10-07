@@ -48,7 +48,7 @@ colorscheme monoflow
 
 If you are using [`lualine`](https://github.com/hoob3rt/lualine.nvim), you can also enable the provided theme:
 
-> Make sure to set theme as 'dracula-nvim' as dracula already exists in lualine built in themes
+> Make sure to set theme as 'monoflow-nvim' as monoflow already exists in lualine built in themes
 
 ```lua
 require('lualine').setup {
@@ -63,7 +63,6 @@ require('lualine').setup {
 ## 🔧 Configuration
 
 The configuration must be run before `colorscheme` command to take effect.
-To customize the 'dracula-soft' variant, include `theme = 'dracula-soft'` in the `setup()` table below.
 
 If you're using Lua:
 
