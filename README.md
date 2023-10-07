@@ -128,3 +128,5 @@ local colors = require('monoflow').colors()
 ```
 
 This will return the following table (`monoflow` palette shown):
+
+![colors](./assets/colors.png)
